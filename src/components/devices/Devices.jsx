@@ -4,27 +4,30 @@ import { withRouter } from 'react-router-dom'
 
 import { seedDevices } from 'seedData/devices.json'
 import DeviceList from './DeviceList'
+import ErrorBoundary from '../main/ErrorBoundry'
 
 const Devices = () => (
-  <Grid>
+  <ErrorBoundary>
+    {' '}
+    <Grid>
+      <Grid.Row>
+        <Menu position='right'>
+          <Menu.Item>
+            <Input
+              icon='search'
+              iconPosition='left'
+              placeholder='fake search :O'
+            />
+          </Menu.Item>
+        </Menu>
+      </Grid.Row>
 
-    <Grid.Row>
-      <Menu position='right'>
-        <Menu.Item>
-          <Input
-            icon='search'
-            iconPosition='left'
-            placeholder='fake search :O'
-          />
-        </Menu.Item>
-      </Menu>
-    </Grid.Row>
+      <Grid.Row>
+        <DeviceList devices={seedDevices} />
+      </Grid.Row>
 
-    <Grid.Row>
-      <DeviceList devices={seedDevices} />
-    </Grid.Row>
-
-  </Grid>
+    </Grid>
+  </ErrorBoundary>
 )
 
 export default withRouter(Devices)
