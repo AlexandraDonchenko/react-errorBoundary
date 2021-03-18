@@ -1,4 +1,5 @@
 import React from 'react'
+import ServerErr from '../ServerErr.jsx/ServerErr'
 
 class ErrorBoundary extends React.Component {
   constructor(props) {
@@ -19,7 +20,7 @@ class ErrorBoundary extends React.Component {
     const { children } = this.props
     if (this.state.hasError) {
       // You can render any custom fallback UI
-      return <h1>Something went wrong.</h1>
+      return <ServerErr />
     }
 
     return children
