@@ -5,12 +5,14 @@ import { withRouter } from 'react-router-dom'
 import { seedDevices } from 'seedData/devices.json'
 import DeviceList from './DeviceList'
 import ErrorBoundary from '../main/ErrorBoundry'
+import Profile from '../profile/Profile'
 
 const Devices = () => (
   <ErrorBoundary>
     {' '}
     <Grid>
       <Grid.Row>
+        <Profile />
         <Menu position='right'>
           <Menu.Item>
             <Input

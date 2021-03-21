@@ -5,15 +5,18 @@ import { Container, Segment, Image } from 'semantic-ui-react'
 import theGiant from 'images/The_Giant.jpg'
 import ErrorBoundary from '../main/ErrorBoundry'
 
-const Profile = () => (
+const Profile = () => {
+  throw 'EEEEEERRRROOOOOR'
+  return (
 
-  <ErrorBoundary>
-    <Container>
-      <Segment>
-        <Image src={theGiant} size='large' centered style={{ padding: '20px' }} />
-      </Segment>
-    </Container>
-  </ErrorBoundary>
-)
+    <ErrorBoundary>
+      <Container>
+        <Segment>
+          <Image src={theGiant} size='large' centered style={{ padding: '20px' }} />
+        </Segment>
+      </Container>
+    </ErrorBoundary>
+  )
+}
 
 export default withRouter(Profile)
