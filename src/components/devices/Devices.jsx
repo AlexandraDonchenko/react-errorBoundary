@@ -4,12 +4,11 @@ import { withRouter } from 'react-router-dom'
 
 import { seedDevices } from 'seedData/devices.json'
 import DeviceList from './DeviceList'
-import ErrorBoundary from '../main/ErrorBoundry'
+import ErrorBoundary from '../main/ErrorBoundary'
 import Profile from '../profile/Profile'
 
 const Devices = () => (
   <ErrorBoundary>
-    {' '}
     <Grid>
       <Grid.Row>
         <Profile />

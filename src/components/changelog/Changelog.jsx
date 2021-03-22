@@ -2,7 +2,7 @@ import React from 'react'
 import { withRouter } from 'react-router-dom'
 import { Container, Segment, Image } from 'semantic-ui-react'
 import Oskar_Kokoschka from 'images/Oskar_Kokoschka.jpg'
-import ErrorBoundary from '../main/ErrorBoundry'
+import ErrorBoundary from '../main/ErrorBoundary'
 
 const Changelog = () => (
   <ErrorBoundary>

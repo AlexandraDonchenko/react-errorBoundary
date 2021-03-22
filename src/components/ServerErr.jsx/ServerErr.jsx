@@ -12,4 +12,4 @@ const ServerErr = () => (
     <div style={{ fontSize: '20pt', textAlign: 'center' }}> INTERNAL SERVER ERROR</div>
   </div>
 )
-export default withRouter(ServerErr)
+export default ServerErr

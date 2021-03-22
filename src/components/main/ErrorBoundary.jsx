@@ -1,7 +1,6 @@
 import React from 'react'
 import ServerErr from '../ServerErr.jsx/ServerErr'
 import ServerAPI from '../../utils/ServerAPI'
-import getDisplayableDaysHoursMinutes from '../../utils/time'
 
 class ErrorBoundary extends React.Component {
   constructor(props) {
@@ -26,7 +25,7 @@ class ErrorBoundary extends React.Component {
   render() {
     const { children } = this.props
     if (this.state.hasError) {
-      ServerAPI.reportError(this.state.error, this.state.info.componentStack, this.state.errorTime)
+      ServerAPI.reportError(this.state.error.name, this.state.info.componentStack, this.state.errorTime)
       return <ServerErr />
     }
 
